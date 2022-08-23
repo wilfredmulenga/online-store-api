@@ -1,9 +1,9 @@
-import admin from '../../firebase-service.cjs'
 import express from 'express'
+import admin from '../../firebase-service.cjs'
 
 const router = express.Router()
-/* GET users listing. */
-const userRouter = router.get('/', async function (req, res) {
+
+const userRouter = router.post('/', async function (req, res) {
     try {
         const user = await admin.auth().createUser({
             email: 'wilfred.mulenga@yahoo.com',

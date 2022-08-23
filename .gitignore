@@ -7,3 +7,5 @@
  
 firebase-adminsdk.json
 credentials.json
+package-lock.json
+yarn.log.json
