@@ -1,0 +1,9 @@
+/node_modules
+
+/bin
+/public
+
+.env
+ 
+firebase-adminsdk.json
+credentials.json
