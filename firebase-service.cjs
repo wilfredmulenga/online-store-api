@@ -4,7 +4,7 @@ const credentials = require('./credentials.json')
 
 firebase.initializeApp({
     credential: firebase.credential.cert(credentials),
-    databaseURL: 'https://<yourproject>.firebaseio.com',
+    databaseURL: 'https://velo-137f9-default-rtdb.firebaseio.com',
 })
 
 module.exports = firebase
