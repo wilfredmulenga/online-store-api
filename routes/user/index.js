@@ -3,7 +3,7 @@ import admin from '../../firebase-service.cjs'
 
 const router = express.Router()
 
-const userRouter = router.post('/', async function (req, res) {
+router.post('/', async function (req, res) {
     try {
         const user = await admin.auth().createUser({
             email: 'wilfred.mulenga@yahoo.com',
@@ -15,4 +15,4 @@ const userRouter = router.post('/', async function (req, res) {
     }
 })
 
-export default userRouter
+export default router
