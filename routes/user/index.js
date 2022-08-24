@@ -5,9 +5,10 @@ const router = express.Router()
 
 router.post('/', async function (req, res) {
     try {
+        const { email, password } = req.body
         const user = await admin.auth().createUser({
-            email: 'wilfred.mulenga@yahoo.com',
-            password: '111111',
+            email,
+            password,
         })
         res.send(user)
     } catch (error) {
