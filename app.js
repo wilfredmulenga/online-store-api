@@ -2,6 +2,7 @@ import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
 // import { logger } from 'morgan'
 import indexRouter from './routes/index.js'
 import dotenv from 'dotenv'
@@ -21,6 +22,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 // app.use(express.static(path.join(__dirname, 'public')))
 
+app.use(
+    cors({
+        origin: '*',
+    }),
+)
 app.use('/', indexRouter)
 
 // catch 404 and forward to error handler

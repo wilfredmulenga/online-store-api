@@ -2,11 +2,11 @@ import express from 'express'
 import firebase from '../../firebase-service.cjs'
 
 const router = express.Router()
-const ref = firebase.database().ref('orders')
 
 router.get('/', function (req, res) {
     const { userId } = req.query
 
+    const ref = firebase.database().ref(`orders/${userId}`)
     ref.on(
         'value',
         (snapshot) => {

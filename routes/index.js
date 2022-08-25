@@ -6,11 +6,13 @@ import productsRouter from './products/index.js'
 import userRouter from './user/index.js'
 import usersRouter from './users/index.js'
 import orderRouter from './order/index.js'
+import ordersRouter from './orders/index.js'
 
 router.use('/product', productRouter)
 router.use('/products', productsRouter)
 router.use('/user', userRouter)
 router.use('/users', usersRouter)
 router.use('/order', orderRouter)
+router.use('/orders', ordersRouter)
 
 export default router
