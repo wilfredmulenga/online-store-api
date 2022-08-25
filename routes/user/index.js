@@ -10,7 +10,7 @@ router.post('/', async function (req, res) {
             email,
             password,
         })
-        res.send(user)
+        return res.json(user)
     } catch (error) {
         console.log(error)
     }

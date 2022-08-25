@@ -52,7 +52,7 @@ router.patch('/', function (req, res) {
         console.log(error)
     }
 
-    res.sendStatus(200)
+    return res.sendStatus(200)
 })
 
 router.delete('/', function (req, res) {
@@ -63,7 +63,7 @@ router.delete('/', function (req, res) {
         console.log(error)
     }
 
-    res.sendStatus(200)
+    return res.sendStatus(200)
 })
 
 export default router

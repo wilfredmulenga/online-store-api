@@ -16,7 +16,7 @@ router.post('/', function (req, res) {
         console.log(error)
     }
 
-    res.sendStatus(200)
+    return res.sendStatus(200)
 })
 
 export default router

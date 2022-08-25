@@ -15,7 +15,7 @@ router.get('/', async function (req, res) {
     }
 
     await listAllUsers()
-    res.send(allUsers)
+    return res.json(allUsers)
 })
 
 export default router
