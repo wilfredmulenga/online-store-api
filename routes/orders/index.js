@@ -2,28 +2,20 @@ import express from 'express'
 import firebase from '../../firebase-service.cjs'
 
 const router = express.Router()
-const ref = firebase.database().ref('products')
+const ref = firebase.database().ref('orders')
 
-router.post('/', function (req, res) {
-    try {
-        const { category, description, image, price, title } = req.body
+router.get('/', function (req, res) {
+    const { userId } = req.query
 
-        const newProductRef = ref.push()
-        newProductRef.set({
-            category,
-            id: newProductRef.key,
-            description,
-            image,
-            price,
-            title,
-            rating: {
-                count: 0,
-                rate: 0,
-            },
-        })
-    } catch (error) {
-        console.log(error)
-    }
-
-    res.sendStatus(200)
+    ref.on(
+        'value',
+        (snapshot) => {
+            res.send(snapshot.val())
+        },
+        (errorObject) => {
+            console.log('The read failed: ' + errorObject.name)
+        },
+    )
 })
+
+export default router
