@@ -5,4 +5,4 @@ Go to create a service account and download it. You can rename it to `credential
 
 
 #scripts
-To run the API use the following command `yarn run start`
+To run the API use the following command `yarn run start`. The server runs on port 4000.
